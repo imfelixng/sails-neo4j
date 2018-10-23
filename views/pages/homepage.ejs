@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Student</title>
+</head>
+<body>
+  <h1>List Student</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Grade</th>
+    </tr>
+    <%students.forEach((student) => { %>
+        <tr>
+          <td><%= student.ID %></td>
+          <td><a href="/friends/<%= student.ID %>"><%= student.name %></a></td>
+          <td><%= student.grade %></td>
+        </tr>
+    <% })%>
+  </table>
+</body>
+</html>
+
